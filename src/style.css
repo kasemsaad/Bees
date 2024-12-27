@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Ping';
+  src: url('./fonts/PingAR+LT-Heavy.otf') format('opentype');
+
+}
+@font-face {
+  font-family: 'PingMedium';
+  src: url('./fonts/PingAR+LT-Medium.otf') format('opentype');
+ 
+}
+@font-face {
+  font-family: 'calibri-havy';
+  src: url('./fonts/calibri-regular.ttf') format('truetype'); 
+ 
+}
+@font-face {
+  font-family: 'calibri-bold';
+  src: url('./fonts/calibri-bold.ttf') format('truetype'); 
+ 
+}
+body {
+margin: 0px;  
+  background: linear-gradient(150deg, rgba(255, 180, 4, 0.833), rgb(215, 207, 186));
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: auto;
+}
