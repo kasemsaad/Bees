@@ -1,12 +1,12 @@
 <template>
   <div
-    class="w-full h-[100vh] flex items-center justify-center"
+    class="w-full h-[100vh]  flex items-center justify-center"
     dir="rtl"
     style="
       background-image: url(../assets/icons/IMG-20240511-WA0003-fotor-bg-remover-20240511164232.png);
     "
   >
-    <div class="w-1/2 py-5 flex flex-col items-center justify-center">
+    <div class="w-1/2 py-5 flex  shadow-lg rounded-xl flex-col items-center justify-center">
         <img class="sm:w-[10px] md:w-[40px] w-[40px]" src="../assets/icons/IMG-20240511-WA0003-fotor-bg-remover-20240511164232.png" alt="">
       <label for="" class="lg:text-4xl">تسجيل الدخول</label>
 

@@ -7,6 +7,7 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import { createPinia } from 'pinia';
 const app = createApp(App);
 
 const vuetify = createVuetify({
@@ -18,5 +19,6 @@ const vuetify = createVuetify({
     rtl: true, // Enable RTL
   });
 app.use(vuetify)
+app.use(createPinia());
 app.component('QrcodeVue', QrcodeVue); 
 app.use(router).mount('#app')
