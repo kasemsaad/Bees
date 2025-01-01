@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     submit() {
-       this.value = `https://cabtabuk.tsp.sa/api/certificates/${this.code_certificate}`; // Update the QR code
+       this.value = `https://cabtabuk.tsp.sa/api/certificates/${this.code_certificate}`; 
        basurl
         .get(`certificates/${this.code_certificate}`)
         .then((response) => {

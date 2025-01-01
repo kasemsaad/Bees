@@ -4,7 +4,6 @@ import axios from "axios";
 // Create an Axios instance
 const axiosInstance = axios.create({
   baseURL: "https://cabtabuk.tsp.sa/api/",
-  //   timeout: 10000, // Timeout after 10 seconds
 });
 
 // Request interceptor
