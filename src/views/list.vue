@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-[100vh] text-bold flex flex-col items-center justify-center"
+    class="w-full min-h-[100vh] text-bold flex flex-col items-center justify-center"
     dir="rtl"
   >
   

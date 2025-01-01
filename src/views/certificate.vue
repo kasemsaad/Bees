@@ -56,13 +56,13 @@ export default {
     return {
       code_certificate: "",
       data: "",
-      value: 'https://example.com', // URL or text to encode in the QR code
+      value: 'https://cabtabuk.tsp.sa', // URL or text to encode in the QR code
 
     };
   },
   methods: {
     submit() {
-       this.value = `http://localhost:8000/api/certificates/${this.code_certificate}`; // Update the QR code
+       this.value = `https://cabtabuk.tsp.sa/api/certificates/${this.code_certificate}`; // Update the QR code
        basurl
         .get(`certificates/${this.code_certificate}`)
         .then((response) => {

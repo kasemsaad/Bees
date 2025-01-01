@@ -24,17 +24,17 @@ const routes = [
         path: '/list',
         name: 'list',
         component: List,
-        meta: { requiresAuth: true }    },
+        meta: { requiresAuth: false }    },
     {
         path: '/add',
         name: 'add',
         component: AddTraining,
-        meta: { requiresAuth: true }    },
+        meta: { requiresAuth: false }    },
     {
         path: '/edit/:id',
         name: 'edit',
         component: EditTraining,
-        meta: { requiresAuth: true }    },
+        meta: { requiresAuth: false }    },
     {
         path: '/search',
         name: 'search',

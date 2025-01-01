@@ -6,7 +6,7 @@
       background-image: url(../assets/icons/IMG-20240511-WA0003-fotor-bg-remover-20240511164232.png);
     "
   >
-    <div class="w-1/2 my-10 rounded-xl shadow-xl">
+    <div class="md:w-1/2 sm:w-[1/3] my-10 rounded-xl shadow-xl">
       <div class="bg-white rounded-xl shadow-xl p-6 w-[100%]">
         <h2 class="text-xl font-bold mb-4">التسجيل في دورة (أساسيات تربية النحل وإنتاج العسل)</h2>
 
@@ -32,17 +32,18 @@
               <input
                 type="radio"
                 v-model="formData.gender"
-                value="ذكر"
+                value="male"
                 required
                 class="mr-2"
               />
               👱‍♂️ ذكر
             </label>
+            
             <label class="flex items-center">
               <input
                 type="radio"
                 v-model="formData.gender"
-                value="انثي"
+                value="female"
                 class="mr-2"
               />
               👧 أنثى
@@ -106,6 +107,7 @@
               />
               المتدرب من قام بالتحويل
             </label>
+            <!-- {{ formData.transferred_by }} -->
             <label class="flex items-center">
               <input
                 type="radio"
@@ -167,13 +169,14 @@
         </div>
 
         <!-- Accept Policy -->
+         
         <div class="mb-4">
           <label class="block mb-2 font-medium">قبول السياسة *</label>
           <input
             v-model="formData.accept_policy"
             type="checkbox"
-            :true-value="true"
-            :false-value="false"
+            :true-value="1"
+            :false-value="0"
             required
           />
           <p v-if="errors.accept_policy" class="text-red-500 text-sm">قبول السياسة مطلوب</p>
@@ -278,7 +281,7 @@ export default {
     },
     getStudent(id) {
       basurl
-        .get(`certificates/${id}`)
+        .get(`certificate/${id}`)
         .then((response) => {
           this.formData = response.data.data;
           console.log(response.data.data);
@@ -294,22 +297,9 @@ export default {
         basurl
           .put(`certificates/${id}`, this.formData)
           .then((response) => {
-            alert("تم إرسال البيانات بنجاح!");
+            alert("تم تعديل البيانات بنجاح");
             console.log("Response data:", response.data);
-            // Reset form
-            this.formData = {
-              name: "",
-              gender: "",
-              national_id: "",
-              phone_number: "",
-              city: "",
-              transferred_by: "",
-              other: "",
-              accept_policy: false,
-              from_date: "",
-              to_date: "",
-              hours: null,
-            };
+           
           })
           .catch((error) => {
             console.error("Fetch error:", error);

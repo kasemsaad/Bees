@@ -72,7 +72,9 @@ export default {
         .then((response) => {
           if (response && response.data) {
             // Navigate to the certificate route if valid
-            this.navigateTo(`/certificate/${this.code_certificate}`);
+            // this.navigateTo(`/certificate/${this.code_certificate}`);
+            const url = `certificate/${this.code_certificate}`;
+            window.open(url, "_blank"); // Open the URL in a new tab
           } else {
             // Handle invalid certificate error
             this.error = "رقم الهوية غير صحيح";
